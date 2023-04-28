@@ -1,0 +1,41 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "./src/index.ts",
+      "use": "@now/node-server"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/src/index.ts",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/api/v1/register",
+      "dest": "/src/index.ts",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/api/v1/login",
+      "dest": "/src/index.ts",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/api/v1/refresh-token",
+      "dest": "/src/index.ts",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/api/v1/update-avatar",
+      "dest": "/src/index.ts",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/api/v1/user-info",
+      "dest": "/src/index.ts",
+      "methods": ["GET"]
+    }
+  ]
+}
